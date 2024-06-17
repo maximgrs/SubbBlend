@@ -1,22 +1,23 @@
-import { StyleSheet, Text, View, TextInput, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, TextInput, Dimensions, Image, Platform} from 'react-native'
 import Reactimport, { useState } from 'react'
 
 const { height, width } = Dimensions.get('window')
+const imageHeight = 20;
 
-const InputField = ({title}:{title:string}) => {
+const InputField = ({title, placeholder}:{title:string, placeholder:string}) => {
     const [text, setText] = useState('')
 
     return (
         <View >
             <TextInput 
                 style={styles.inputFieldBox}
-                placeholder="Geben Sie hier Text ein"
+                placeholder={placeholder}
                 value={text}
                 onChangeText={setText}
                 autoCapitalize='none'
                 keyboardType='default'
             />
-            <Text style={styles.title}>{title}</Text> 
+            <Text style={styles.title}>{title}</Text>
         </View>
     )
 }
@@ -26,7 +27,7 @@ export default InputField
 const styles = StyleSheet.create({
     inputFieldBox: {
         color: '#000000',
-        fontWeight: '600',
+        fontWeight: '400',
         width: width * 0.85,
         height: 50,
         backgroundColor: '#F3F3F3',
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     },
     title: {
         color: '#8A8A8A',
-        fontWeight: 'bold',
+        fontWeight: '600',
         position: 'absolute',
         top: -10,
         left: 30,
