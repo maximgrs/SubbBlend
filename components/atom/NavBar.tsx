@@ -27,8 +27,6 @@ export default NavBar
 
 const styles = StyleSheet.create({
     container: {
-        height: 50,
-        backgroundColor: '#fff',
         marginTop: 80,
       },
       scrollContainer: {

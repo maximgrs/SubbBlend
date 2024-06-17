@@ -16,7 +16,8 @@ const CreateOwnShakeBox = () => {
     }, []);
 
   return (
-    <View style={styles.rectangle}>
+    <View style={styles.container}>
+        <View style={styles.content}>  
         <View style={styles.boxContent}>
             <Text style={styles.heading}>Create{'\n'}your own</Text>
             <Text style={styles.description}>Choose between a variety of flavours and other supps</Text>
@@ -26,7 +27,8 @@ const CreateOwnShakeBox = () => {
 
         <View style={styles.button}>
             <Image style={styles.vector} source={require('../../assets/images/vectorRightArrow.png')}/>
-        </View>
+        </View>  
+    </View>
     </View>
   )
 }
@@ -34,19 +36,22 @@ const CreateOwnShakeBox = () => {
 export default CreateOwnShakeBox
 
 const styles = StyleSheet.create({
-    rectangle: {
-      height: height * 0.45,
-      width: width * 0.88,
-      backgroundColor: '#A4D99B',
-      position: 'absolute',
-      right: 0,
-      borderTopLeftRadius: 40,
-      borderBottomLeftRadius: 40,
-      marginTop: 150,
-      shadowColor: '#000',
-      shadowOffset: { width: 0, height: 2 },
-      shadowOpacity: 0.3,
-      shadowRadius: 6,
+    container:{
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+    },
+    content: {
+        height: height * 0.45,
+        width: width * 0.86,
+        backgroundColor: '#A4D99B',
+        borderTopLeftRadius: 40,
+        borderBottomLeftRadius: 40,
+        marginTop: 150,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.3,
+        shadowRadius: 6,
     },
     description: {
         marginTop: 10,
@@ -75,17 +80,16 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0,
         backgroundColor: 'white',
-        width: '25%',
-        height: '15%',
+        width: '24%',
+        height: '13.5%',
         borderTopRightRadius: 15,
         borderBottomRightRadius: 15,
         borderBottomLeftRadius: 40,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
-
     },
     vector:{
         position: 'absolute'
-    }
+    },
   });
