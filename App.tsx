@@ -6,9 +6,9 @@ import SignUpPage from './components/organism/SignUpPage';
 
 export default function App() {
   return (
-      //<HomeScreen />
+      <HomeScreen />
       //<LogInPage />
-      <SignUpPage/>
+      //<SignUpPage/>
   );
 }
 
