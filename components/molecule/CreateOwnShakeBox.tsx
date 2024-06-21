@@ -18,17 +18,17 @@ const CreateOwnShakeBox = () => {
   return (
     <View style={styles.container}>
         <View style={styles.content}>  
-        <View style={styles.boxContent}>
-            <Text style={styles.heading}>Create{'\n'}your own</Text>
-            <Text style={styles.description}>Choose between a variety of flavours and other supps</Text>
+            <View style={styles.boxContent}>
+                <Text style={styles.heading}>Create{'\n'}your own</Text>
+                <Text style={styles.description}>Choose between a variety of flavours and other supps</Text>
+            </View>
+
+            <Image style={styles.image} source={require('../../assets/images/bottle.png')}/>
+
+            <View style={styles.button}>
+                <Image style={styles.vector} source={require('../../assets/images/vectorRightArrow.png')}/>
+            </View>  
         </View>
-
-        <Image style={styles.image} source={require('../../assets/images/bottle.png')}/>
-
-        <View style={styles.button}>
-            <Image style={styles.vector} source={require('../../assets/images/vectorRightArrow.png')}/>
-        </View>  
-    </View>
     </View>
   )
 }
@@ -37,9 +37,8 @@ export default CreateOwnShakeBox
 
 const styles = StyleSheet.create({
     container:{
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
+        marginLeft: 'auto',
+        marginTop: 35
     },
     content: {
         height: height * 0.45,
@@ -47,7 +46,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#A4D99B',
         borderTopLeftRadius: 40,
         borderBottomLeftRadius: 40,
-        marginTop: 150,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.3,
